@@ -215,19 +215,19 @@ Analyzer's default behaviour is to bring results in descending order. If ascendi
 
 #### Here are some examples queries that describe everyday uses cases.
 
-1. top N codes for a given period of time :  
+1. Top N codes for a given period of time :  
 
-elb-log-analyzer logs/  --col1=count --col3=elb_status_code --limit=25
+```elb-log-analyzer logs/  --col1=count --col3=elb_status_code --limit=25```
 
-2. top N urls for an error passed as parameter for a given period of time:
+2. Top N urls for an error passed as parameter for a given period of time:
 
-elb-log-analyzer logs/  --start=2018/08/01 --end=2018/08/01 --col1=count --col2=requested_resource --col3=elb_status_code --prefix3=404 --limit=25
+```elb-log-analyzer logs/  --start=2018/08/01 --end=2018/08/01 --col1=count --col2=requested_resource --col3=elb_status_code --prefix3=404 --limit=25```
 
-3. top N user agents for a given http code for a given period of time:
+3. Top N user agents for a given http code for a given period of time:
 
-elb-log-analyzer logs/  --start=2018/08/01 --end=2018/08/01 --col1=count --col2=user_agent --col3=elb_status_code --prefix3=404 --limit=25
+```elb-log-analyzer logs/  --start=2018/08/01 --end=2018/08/01 --col1=count --col2=user_agent --col3=elb_status_code --prefix3=404 --limit=25```
 
 4.A report for a given period of time.
 
-elb-log-analyzer logs/  --col1=count --col2=requested_resource --col3=response_processing_time --col4=client --col5=elb_status_code --limit=25
+```elb-log-analyzer logs/  --col1=count --col2=requested_resource --col3=response_processing_time --col4=client --col5=elb_status_code --limit=25```
 
