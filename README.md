@@ -3,10 +3,44 @@
 [![Travis](https://travis-ci.org/ozantunca/elb-log-analyzer.svg?branch=master)](https://travis-ci.org/ozantunca/elb-log-analyzer)
 [![Snyk](https://snyk.io/test/npm/elb-log-analyzer/badge.svg)](https://snyk.io/test/npm/elb-log-analyzer)
 
-ELB log analyzer is a command line tool for parsing Elastic Load Balancer's access logs and getting quick statistics. Useful for detecting requests taking longest time, IPs making most requests and many other data that can be derived from log files. If you need help bulk downloading logs from your S3 bucket, try [elblogs](https://github.com/namirali/elblogs).
+
+# How to get the logs from AWS 
+
+Install the awscli-bundle (!IMPORTAN! You need to grant permissions for this prior, please refer to the IAM permissions on your AWS account) for your particular OS. For Mac OS use the following 
+
+```sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws```
+
+After that please use the aws configure command and input the specific parameters for your install.
+
+```aws configure```
+
+```
+AWS Access Key ID [None]: 
+AWS Secret Access Key [None]: 
+Default region name [None]: 
+Default output format [None]: json / text
+```
+
+Once that's configure you can use regular POSIX commands as follows:
+
+To list your logs:
+
+```aws s3 ls s3://techtest-alb-logs/01/```
+
+To copy those logs over to your computer for the quick analysis use case
+
+```aws s3 cp * s3://techtest-alb-logs/*```
+
+To sync files from your PC to the S3 bucket
+
+```aws s3 sync s3://techtest-alb-logs/ /your-path/```
 
 
-## Installation
+For further references check the documentation here https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html
+
+
+## How to Install the ELB log analyzer.
+
 ```sh
 npm install -g elb-log-analyzer
 ```
