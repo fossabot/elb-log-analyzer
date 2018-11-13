@@ -2,6 +2,7 @@
 [![npm version](https://badge.fury.io/js/elb-log-analyzer.svg)](https://www.npmjs.org/elb-log-analyzer)
 [![Travis](https://travis-ci.org/ozantunca/elb-log-analyzer.svg?branch=master)](https://travis-ci.org/ozantunca/elb-log-analyzer)
 [![Snyk](https://snyk.io/test/npm/elb-log-analyzer/badge.svg)](https://snyk.io/test/npm/elb-log-analyzer)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjzuniga184%2Felb-log-analyzer.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjzuniga184%2Felb-log-analyzer?ref=badge_shield)
 
 
 # How to get the logs from AWS 
@@ -231,3 +232,7 @@ Analyzer's default behaviour is to bring results in descending order. If ascendi
 
 ```elb-log-analyzer logs/  --col1=count --col2=requested_resource --col3=response_processing_time --col4=client --col5=elb_status_code --limit=25```
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjzuniga184%2Felb-log-analyzer.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjzuniga184%2Felb-log-analyzer?ref=badge_large)
